@@ -1,0 +1,3465 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    background-color: #aeaeae34;
+    background-size: cover;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 1281px) {
+
+    .loginContainer {
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+        position: absolute;
+        text-align: center;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 10px;
+        left: 40%;
+        width: 20%;
+        height: 800px;
+    }
+
+    .loginIconImage>img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .loginTitle h1,
+    .registerSection h1 {
+        font-size: 38px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .loginSection form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .registerSection form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginSection label{
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        color: rgba(0, 0, 0, 0.529);
+        font-weight: bold;
+    }
+    .registerSection label {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        color: rgba(0, 0, 0, 0.529);
+        font-weight: bold;
+    }
+
+    .registerSection {
+        display: none;
+    }
+
+
+    .loginSection span,
+    .registerSection span {
+        position: absolute;
+        margin-left: 30px;
+        transition: 0.3s;
+        transform: translateY(0px) translateY(-7px);
+        background: white;
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid rgba(0, 0, 0, 0.529);
+        letter-spacing: 0.2rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.529);
+        background: white;
+        font-size: 14px;
+    }
+
+    .loginSection input{
+        display: flex;
+        width: 300px;
+        height: 50px;
+        color: white;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        border: none;
+        background: rgba(0, 102, 133, 0.718);
+    }
+    
+    .registerSection input {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 50px;
+        color: white;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        border: none;
+        background: rgba(0, 102, 133, 0.718);
+    }
+
+
+    .loginSection input::placeholder,
+    .registerSection input::placeholder {
+        color: white;
+    }
+
+
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .forgot {
+background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: white;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    margin-top: -25px;
+    margin-left: 130px;
+    }
+    .loginSection input[type="submit"], .registerSection input[type="submit"] {
+        font-size: 18px;
+        margin-left: 0px;
+        height: 70px;
+        padding-bottom: 7px;
+        padding-right: 40px;
+        border-radius: 10px;
+        border: 5px solid rgba(0, 102, 133, 0.718);
+        width: 300px;
+        padding-left: 110px;
+    }
+    
+
+    .loginSection h5{
+        color: white;
+        font-size: 16px;
+        width: 90%;
+        margin-left:14px;
+        padding-top: 10px;
+    }
+    .registerSection h5 {
+        color: white;
+        font-size: 16px;
+        width: 90%;
+        margin-left:14px;
+        margin-top: -20px;
+    }
+
+    .loginBySocial {
+        color: white;
+    }
+
+    .loginBySocial i {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .notAccount {
+        margin-top: 30px;
+        color: white;
+        opacity: 0.6;
+    }
+
+    .notAccount button {
+        border: none;
+        background-color: transparent;
+        color: rgb(0, 9, 11);
+        margin-bottom: 100px;
+    }
+
+    .BackToLogin {
+        position: absolute;
+        margin-top:0px;
+        left: 30%;
+        border: none;
+        background-color: transparent;
+        color: rgb(1, 74, 91);
+    }
+
+    .topHeader {
+        display: none;
+    }
+
+    .navbar {
+        overflow: hidden;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        width: 100%;
+        height: 83px;
+        z-index: 1000;
+        background: rgb(0, 101, 133);
+        background: linear-gradient(153deg, rgba(0, 101, 133, 0.97) 0%, rgba(0, 172, 226, 1) 100%);
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .navbar a {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        margin: 0 40px;
+    }
+
+    .navbar a:hover {
+        color: rgb(0, 251, 255);
+        ;
+    }
+
+    .navbar .active {
+        color: rgb(0, 251, 255);
+    }
+
+    .navbar span {
+        margin-right: 6px;
+    }
+
+    .navbar img {
+        width: 60px;
+        position: absolute;
+        left: 0;
+        margin-left: 30px;
+    }
+    .logASwim{
+        background: rgba(0, 102, 133, 0.718);
+        border: 5px solid rgba(0, 102, 133, 0.718);
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+    }
+
+    .subHeader {
+        display: flex;
+        text-decoration: none;
+        padding-top: 20px;
+        position: fixed;
+        z-index: 998;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(233, 231, 231);
+        justify-content: left;
+        padding-left: 30px;
+    }
+
+    .subHeader .subTitle {
+        font-size: 22px;
+        opacity: 0.5;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    .subHeader #dropFilter {
+        position: absolute;
+        right: 0;
+    }
+
+    .subHeader .active {
+        color: rgb(0, 123, 255);
+        opacity: 1;
+    }
+
+    .subHeader i {
+        transform: rotate(180deg);
+        display: inline-block;
+    }
+
+    .profileUser {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 20px;
+        right: 130px;
+        z-index: 1000;
+    }
+
+    .profileUser button {
+        position: fixed;
+        right: 130px;
+        border: none;
+        background: none;
+        color: white;
+        padding: 10px;
+    }
+
+    .profileUser img {
+        position: fixed;
+        right: 270px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        top: 40px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 2000;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        z-index: 2000;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        z-index: 2000;
+    }
+
+    .profileUser:hover .dropdown-content {
+        display: block;
+    }
+
+    .profileUser:hover .dropbtn {
+        background-color: #25b9f3;
+        border-radius: 10px;
+        z-index: 2000;
+    }
+
+    .settings {
+        background-color: white;
+        border-radius: 30px;
+        position: fixed;
+        display: none;
+        width: 100%;
+        top: 4%;
+        padding-top: 10px;
+        height: 100%;
+        z-index: 999;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .settings i {
+        padding-left: 25px;
+    }
+
+    .settings li {
+        list-style-type: none;
+        margin-bottom: 30px;
+        width: 360px;
+        padding-left: 20px;
+    }
+
+    .settings li h3 {
+        display: inline;
+        margin-right: 140px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        border-radius: 50%;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #1BDFDF;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #1BDFDF;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    .setting_Logo img {
+        width: 170px;
+        height: 170px;
+        margin-top: 50px;
+        margin-left: 130px;
+        opacity: .5;
+    }
+
+    .settings button {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .container {
+        background-image: url(/images/women-swimmer.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: 140px;
+        width: 100%;
+        height: 156px;
+    }
+
+    .container img {
+        float: right;
+        margin-top: 78px;
+        margin-right: 8px;
+    }
+
+    .container h1 {
+        position: relative;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        top: 0px;
+        font-weight: bold;
+    }
+
+    .welcome {
+        background-color: white;
+        height: 76px;
+    }
+
+    .welcome p {
+        display: inline;
+    }
+
+    .welcome button {
+        display: inline;
+        border: none;
+        background-color: transparent;
+        color: rgb(0, 94, 255);
+    }
+
+    .swimmers {
+        background-color: white;
+        margin-top: 10px;
+        padding-top: 10px;
+        height: 200px;
+    }
+
+    .swimerDetails h3 {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 50%;
+        margin-left: 10px;
+        padding-left: 17px;
+        padding-top: 18px;
+        color: white;
+        background-color: #1BDFDF;
+    }
+
+    .swimerDetails h1 {
+        position: absolute;
+        margin-left: 80px;
+        color: #1b59df;
+        font-size: 20px;
+    }
+
+    .swimerDetails h6 {
+        margin-left: 81px;
+        padding-top: 23px;
+        font-size: 10px;
+    }
+
+    #swimerType {
+        float: right;
+        font-size: 30px;
+        margin-right: 10px;
+        top: 0;
+        color: rgba(0, 0, 0, 0.435);
+    }
+
+    .timeAndDistance {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .timeAndDistance h5 {
+        font-size: 14px;
+    }
+
+    .vertical {
+        display: inline;
+        border-left: 2px solid black;
+        margin: 8px;
+    }
+
+    .partName {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .timeAndDistance h4 {
+        font-size: small;
+        left: 0;
+        margin-right: 41px;
+        opacity: 0.3;
+    }
+
+    .horizontal {
+        width: 97%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+    }
+
+    .commentBtn button {
+        display: flex;
+        flex-direction: row;
+        margin-left: 34%;
+        margin-top: 6px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .commentBtn button i {
+        margin-right: 10px;
+        opacity: 0.5;
+    }
+
+    .commentBtn button h5 {
+        margin-top: 3px;
+        opacity: 0.5;
+    }
+
+    .swimmersPage {
+        position: absolute;
+        top: 0;
+        left: 12%;
+        width: 80%;
+    }
+
+    .error-massage{
+        color: white;
+    }
+    #swimmerList {
+        width: 40%;
+        margin-left: 6px;
+        height: 450px;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 150px;
+        padding-top: 30px;
+    }
+
+    .swimmersPage h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 102, 133, 0.718);
+    }
+
+    .swimmersPage input[type='text'] {
+        width: 90%;
+        margin-top: 5px;
+        margin-left: 35px;
+        padding-left: 20px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+    }
+
+    .swimmersPage .swimmerPageUl {
+        width: 97%;
+        height: 250px;
+        border-radius: 10px;
+        background-color: rgba(128, 128, 128, 0.108);
+        margin-top: 20px;
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+    .personalUlLi{
+        background-color: rgba(128, 128, 128, 0.108);
+        width: 95%;
+        height: 155px;
+        margin-left: 15px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .ulLeftUserInfo{
+        position: absolute;
+        left: 10px;
+        list-style: none;
+        font-size: 18px;
+        background:none;
+    }
+    .ulRightUserInfo{
+        position: absolute;
+        right: 150px;
+        list-style: none;
+        background: none;
+    }
+    .userProgBtn{
+        border: none;
+        background-color: transparent;
+        width: 500px;
+        height: 200px;
+        
+    }
+    .userProgBtn .userProgA{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        width: 500px;
+        height: 200px;
+        text-align: center;
+        background: rgba(0, 102, 133, 0.718);
+        border: 5px solid rgba(0, 102, 133, 0.718);
+        border-radius: 10px;
+        margin-left: 50px;
+        padding: 20px;
+        
+    }
+
+
+    .swimmersPage .swimmerPageUl li {
+        list-style: none;
+        padding-left: 0;
+    }
+    .swimmersPage h5{
+        display: inline;
+        color: #698184;
+    }
+
+    .swimmersPage .swimmerDetails h5 {
+        display: inline-block;
+        color: #698184;
+        width: 180px;
+    }
+    .swimmersPage .swimmerDetails h5:hover {
+        display: inline-block;
+        color:rgb(61, 200, 242);
+        width: 180px;
+    }
+
+    .swimmersPage h6 {
+        display: inline-block;
+        color: rgba(91, 94, 101, 0.718);
+        margin-right: 20px;
+    }
+    .swimmerDetailsUser{
+        position: absolute;
+        left: 50px;
+        top: 150px;
+        width: 40%;
+        margin-left: 6px;
+        height: 450px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .swimmerDetailsUser h1{
+        margin-bottom: 25px;
+        margin-top: 30px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: -5px;
+    }
+
+    .buttons #edit {
+        border: 1px solid rgb(231, 157, 19);
+        background-color: rgb(255, 204, 0);
+        width: 80px;
+        border-radius: 20px;
+    }
+
+    .buttons #addPerson {
+        border: 1px solid rgb(44, 183, 234);
+        background-color: #006685b7;
+        width: 160px;
+        height: 40px;
+        color: white;
+        border-radius: 20px;
+    }
+    .editSwimmer{
+        display: none;
+        background-color: rgb(255, 200, 0);
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+        margin-right: 3px;
+        color: white;
+    }
+    .deleteSwimmer{
+        display: none;
+        background-color: rgb(255, 0, 0);
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+        margin-right: 3px;
+        color: white;
+        margin-right: 10px;
+    }
+    .weekTraining {
+        position: absolute;
+        right: 80px;
+        top: 150px;
+        width: 40%;
+        margin-left: 6px;
+        height: 450px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .weekTraining h1 {
+        margin-bottom: 25px;
+        margin-top: 30px;
+    }
+
+    .allDeatails {
+        background-color: rgba(128, 128, 128, 0.108);
+        width: 95%;
+        height: 155px;
+        margin-left: 15px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .allDeatails h1 {
+        margin-top: 0;
+    }
+
+    .weekTraining .swimerDetails h3 {
+        font-size: 12px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        padding: 13px;
+    }
+
+    .weekTraining .swimerDetails h1 {
+        background-color: transparent;
+        color: rgb(36, 54, 145);
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .weekTraining .timeAndDistance {
+        position: absolute;
+        top: 120px;
+    }
+    .weekTraining .timeAndDistance  h2{
+        font-size: 12px;
+    }
+    .weekTraining .horizontal {
+        position: absolute;
+        width: 480px;
+        /* margin-left: 20px; */
+    }
+
+    .weekTraining .swimerDetails h6 {
+        padding-top: 18px;
+    }
+
+    .partName h4 {
+        margin-right: 20px;
+        font-size: 10px;
+    }
+
+    .commentBtn .bi-chat-quote {
+       margin-left: 130px;
+    }
+    .notification {
+        display: none;
+    }
+
+    .commercial {
+        position: absolute;
+        bottom: 60px;
+        background: url(../images/commercial.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100px;
+        width: 100%;
+    }
+
+    .commercial img {
+        padding-top: 10px;
+        margin-right: 40px;
+        width: 80px;
+        float: right;
+    }
+
+    .commercial h1 {
+        color: rgb(255, 255, 255);
+        margin-top: 45px;
+        font-size: 50px;
+        width: 700px;
+    }
+    .updateSwimmer{
+        position: fixed;
+        /* display: none; */
+        width: 100%;
+        top: 4%;
+        left: 20%;
+        height: 100%;
+        /* z-index: 1001; */
+        /* transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards; */
+    }
+
+    .addSwimmer{
+        position: fixed;
+        display: none;
+        width: 100%;
+        top: 4%;
+        left: 20%;
+        height: 100%;
+        z-index: 1001;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+        form {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .addSwimmer h1, .updateSwimmer h1 {
+        color: white;
+    }
+
+    .addTitle, .updateTitle {
+        position: absolute;
+        left: 0%;
+        top: 60px;
+        width: 100%;
+        color: white;
+        background: rgba(0, 102, 133, 0.718);
+    }
+
+    .addSwimmer form , .updateSwimmer form{
+        background-color: white;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        padding-left: 160px;
+        border-radius: 30px;
+        top: 0;
+        width: 60%;
+        height: 95%;
+    }
+
+    .addSwimmer input, .updateSwimmer input {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 380px;
+        padding: 15px;
+        left: 120px;
+        top: 120px;
+        border-radius: 3px;
+        border: 1px solid #215858;
+        font-size: 14px;
+        margin-bottom: 20px;
+
+    }
+
+    .addSwimmer label, .updateSwimmer label {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: rgba(0, 0, 0, 0.529);
+        font-weight: bold;
+    }
+
+    .addSwimmer span, .updateSwimmer span {
+        position: absolute;
+        margin-left: 30px;
+        transition: 0.3s;
+        transform: translateY(0px) translateY(-7px);
+        background: white;
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid rgba(0, 0, 0, 0.529);
+        letter-spacing: 0.2rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.529);
+        background: white;
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        background-color: white;
+        color: white;
+    }
+
+    input[type="text"]:focus {
+        border: 1px solid #1BDFDF;
+    }
+
+    input[type="file"]::file-selector-button {
+        background-color: white;
+        color: white;
+        border: none;
+    }
+
+    input[type="submit"] {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        margin-left: 250px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 80px;
+        color: white;
+        z-index: 1000;
+        background: rgba(0, 102, 133, 0.718);
+        border: 5px solid rgba(0, 102, 133, 0.718);
+        border-radius: 20px;
+        height: 60px;
+        top: 620px;
+    }
+
+
+    .addSwimmer #closeFormBtn, 
+    .updateSwimmer #closeUpdate {
+        background-color: transparent;
+        margin-top: 30px;
+        padding-bottom: 100px;
+        left: 0;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .addSwimmer strong,
+    .addSwimmer h1, 
+    .updateSwimmer strong,
+    .updateSwimmer h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+
+    .sign-container {
+        width: 400px;
+        position: absolute;
+        right: 60px;
+        top: 140px;
+        height: 550px;
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+        border-radius: 20px;
+        color: white;
+    }
+
+    .sign-container>h1 {
+        padding-top: 1rem;
+        text-align: center;
+        color: var(--very-dark-blue);
+        background-color: var(--light-blue);
+    }
+
+    article {
+        color: var(--very-dark-blue);
+        background-color: var(--light-blue);
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        justify-content: center;
+    }
+
+    article>section {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    article>section>p:first-child {
+        font-size: 2.5rem;
+    }
+
+    .noFood {
+        width: 200px;
+        padding-left: 80px;
+    }
+
+    .noFood p {
+        width: 200px;
+    }
+
+    .sign-container>h2,
+    .sign-container>h3 {
+        text-align: center;
+        background-color: var(--dark-blue);
+        color: var(--very-light-blue);
+    }
+
+    .sign-container>h2 {
+        padding-top: 1rem;
+    }
+
+    .sign-container>h3 {
+        padding: 1rem 0;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .container h1 {
+        position: relative;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        top: 0px;
+        font-weight: bold;
+    }
+
+    .welcome {
+        background-color: white;
+        position: absolute;
+        top: 84px;
+        left: 22%;
+        padding: 20px;
+        width: 55%;
+        height: 110px;
+        border-radius: 0px 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .welcome p {
+        font-size: 24px;
+    }
+
+    .swimmerContainerFollow {
+        display: grid;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: 33% 33% 33% ;
+        justify-items: center;
+        margin-top: 230px;
+    }
+
+    .swimmerContainerFollow .swimmers {
+        width: 90%;
+        height: 185px;
+        margin-left: 16px;
+        /* margin-top: 230px; */
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .swimmerContainerFollow .swimmers:hover {
+        box-shadow: 0px 0px 28px 3px rgba(0, 102, 133, 0.57);
+        -webkit-box-shadow: 0px 0px 28px 3px rgba(0, 102, 133, 0.57);
+        -moz-box-shadow: 0px 0px 28px 3px rgba(0, 102, 133, 0.57);
+    }
+
+    .swimmerContainerFollow .commentBtn i {
+        font-size: 18px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .swimmerContainerFollow h3 {
+        padding-right: 20px;
+    }
+    .partName {
+        margin-right: 20px;
+    }
+
+    .swimmerContainerFollow h6 {
+        position: absolute;
+    }
+
+    .swimmerContainerFollow .timeAndDistance h2 {
+        position: relative;
+        margin-right: 200px;
+        margin-top: 20px;
+        font-size: 20px;
+        display: flex;
+    }
+
+    .swimmerContainerFollow .timeAndDistance>h5 {
+        position: relative;
+        margin-right: 430px;
+        margin-top: 50px;
+        top: 10px;
+
+    }
+    .swimmerDetailsContainer h1{
+        text-align: center;
+        margin-top: 100px;
+        background: rgba(0, 102, 133, 0.718);
+        color: white;
+        text-transform: capitalize;
+    }
+
+    .swimmerInformation{
+        position: absolute;
+        float: left;
+        top: 20%;
+        left: 100px;
+        width: 40%;
+        height: 190px;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .swimmerInformation h3{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .leftInfo{
+        position: absolute;
+        float: left;
+        left: 70px;
+        list-style: none;
+        font-size: 18px;
+    }
+    .rightInfo{
+        position: absolute;
+        float: right;
+        right: 100px;
+        list-style: none;
+        /* right: 60px; */
+    }
+
+    .circle-chart {
+        position: absolute;
+        top: 45%;
+        padding-top: 10px;
+        left: 100px;
+        width: 19%;
+        margin-right: 0;
+        height: 250px;
+        background-color: white;
+        border-radius: 10px;
+    }
+ 
+    .circleAllContainer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .circleContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .circle-chart h2 {
+        text-align: left;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #061941;
+    }
+
+    .circle-chart h5 {
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .circle-chart h6 {
+        line-height: 10px;
+        margin-left: 10px;
+    }
+
+    .circle-chart__circle {
+        animation: circle-chart-fill 1s reverse;
+        transform-origin: center;
+    }
+
+    .circle-chart__info {
+        animation: circle-chart-appear 1s forwards;
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    @keyframes circle-chart-fill {
+        to {
+            stroke-dasharray: 0 100;
+        }
+    }
+
+    @keyframes circle-chart-appear {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .bar-chart {
+        text-align: left;
+        position: absolute;
+        top: 23%;
+        left: 50%;
+        float: right;
+        padding-top: 10px;
+        padding-left: 40px;
+        width: 40%;
+        height: 438px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .bar-chart h2 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .addSwim {
+        position: fixed;
+        width: 36%;
+        display: none;
+        top: 4%;
+        left: 33%;
+        height: 70%;
+        z-index: 1001;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+        form {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+    
+
+    .addSwim form {
+        background-color: white;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        border-radius: 30px;
+        top: 0;
+        width: 100%;
+        height: 750px;
+    }
+
+    .addSwim input {
+        width: 380px;
+        padding: 15px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid rgba(0, 102, 133, 0.718);
+        font-size: 14px;
+        transition: 0.3s;
+        margin-bottom: 15px;
+    }
+
+    .addSwim span {
+        position: absolute;
+        left: 27%;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.681);
+        pointer-events: none;
+        text-transform: uppercase;
+        margin-left: 30px;
+        transition: 0.3s;
+    }
+
+
+    .addSwim input:valid~span,
+    .addSwim input:focus~span {
+        color: rgba(0, 102, 133, 0.718);
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid rgba(0, 102, 133, 0.718);
+        letter-spacing: 0.2rem;
+        border-right: 1px solid rgba(0, 102, 133, 0.718);
+        background: white;
+        font-size: 14px;
+    }
+
+
+    .addSwim #closeAddSwim {
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+        
+
+    .addSwim h1 {
+        color: black;
+        background-color: rgba(0, 102, 133, 0.718);
+        color: white;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+    #Distance,
+    #Course {
+        position: relative;
+        display: inline;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        width: 172px;
+        height: 50px;
+        background: none;
+        border: 0.9px solid rgba(0, 102, 133, 0.718);
+        color: rgba(0, 102, 133, 0.718);
+        text-align: center;
+    }
+
+    #swimType {
+        position: relative;
+        display: inline;
+        margin-bottom: 18px;
+        width: 380px;
+        height: 50px;
+        font-size: 22px;
+        background: none;
+        border: 0.9px solid rgba(0, 102, 133, 0.718);
+        color: rgba(0, 102, 133, 0.718);
+        text-align: center;
+    }
+
+    #Distance:focus,
+    #Course:focus {
+        background: none;
+        background-color: white;
+        color: rgba(0, 102, 133, 0.718);
+    }
+
+    #swimType:focus {
+        background: none;
+        background-color: white;
+        color: rgba(0, 102, 133, 0.718);
+    }
+
+    input[type="time"],
+    input[type="date"] {
+        color: rgba(0, 102, 133, 0.718);
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #course {
+        position: relative;
+        left: 29%;
+        color: rgba(0, 102, 133, 0.718);
+        width: 100px;
+        letter-spacing: 0.2rem;
+        font-size: 14px;
+        border-left: 1px solid rgba(0, 102, 133, 0.718);
+        border-right: 1px solid rgba(0, 102, 133, 0.718);
+        text-transform: uppercase;
+    }
+
+    .circleTitle{
+        position: relative;
+        left: 45%;
+    }
+    .circleTitle h2{
+        font-size: 25px;
+        text-align: left;
+        margin-left: -20px;
+        font-weight: 100;
+    }
+    .swimInfoContainer{
+        position: absolute;
+        top: 45%;
+        padding-top: 10px;
+        left: 26.5%;
+        width: 19%;
+        height: 250px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .swimInformation h2{
+        text-align: center;
+        font-size: 25px;
+    }
+    .updatingDetails{
+        height: 190px;
+        width: 96%;
+        margin-left: 6px;
+        background-color: #42424209;
+        border-radius: 10px;
+    }
+    .updatingDetails ul{
+        padding-top: 20px;
+    }
+    .updatingDetails ul li{
+        padding-left: 30px;
+        list-style: none;
+        padding-bottom: 5px;
+    }
+    .idIsBad{
+        display: block;
+    }
+    .idIsBad h1{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        top: 30%;
+        left: 42%;
+        width: 300px;
+        height: 300px;
+        font-weight: bolder;
+        color: white;
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+    }
+    .idIsGood{
+        display: none;
+    }
+    .workoutOfTheWeek {
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    .workoutOfTheWeek h2 {
+        color: #5b5e65;
+        margin-top: 100px;
+        margin-left: 30%;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .workoutAdvertising {
+        background-color: white;
+        border-radius: 5px;
+        margin-left: 8px;
+        height: 235px;
+    }
+    .workoutOfTheWeek h3{
+        font-size: 18px;
+    }
+
+    .workoutAdvertising h4 {
+        padding-top: 20px;
+        padding-left: 15px;
+        color: #061538b7;
+        font-weight: bolder;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising h5 {
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 18px;
+        color: #666668;
+        font-weight: bold;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising h6 {
+        padding-left: 16px;
+        color: #5b5e65ba;
+        font-weight: bold;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising p {
+        line-height: 19px;
+        margin-left: 10px;
+        font-weight: bold;
+        color: #061538b7;
+    }
+
+    .workoutAdvertising img {
+        width: 50px;
+        position: absolute;
+        margin-left: 340px;
+        margin-top: 15px;
+    }
+    .challengesHeader{
+        display: none;
+    }
+
+
+    #swimAd {
+        position: absolute;
+        right: 0;
+        left: 36%;
+        font-size: 24px;
+        color: #66666866;
+    }
+
+    .workoutAdvertising h3 {
+        color: #66666866;
+        padding-bottom: 100px;
+        display: inline;
+    }
+
+    .dotAd,
+    .dotAd1,
+    .dotAd2 {
+        height: 12px;
+        width: 12px;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #666668;
+    }
+
+    .dotAd {
+        margin-left: 50px;
+    }
+
+    .dotAd1 {
+        background-color: #51c7eb;
+    }
+
+    .dotAd2 {
+        background-color: #19aca0;
+    }
+
+    .adLine {
+        border-top: 3px solid #aeaeae6e;
+        margin-bottom: 4px;
+    }
+
+    .adLove {
+        color: rgba(128, 128, 128, 0.293);
+        font-weight: bold;
+    }
+
+    .adLove i {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .browseByCategory {
+        position: relative;
+        left: 15%;
+        width: 70%;
+        padding-bottom: 25px;
+    }
+
+    .browseByCategory h2 {
+        position: relative;
+        color: #5b5e65;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        margin-left: 380px;
+        font-size: 40px;
+        font-weight: bolder;
+        left: 10%;
+
+    }
+
+    .swimType {
+        background-color: white;
+        border-radius: 5px;
+        height: 563px;
+        width: 96%;
+        margin-left: 2%;
+    }
+
+    .container-grid {
+        display: grid;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-items: center;
+        padding-top: 20px;
+    }
+
+    .container-grid img {
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 20px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .container-grid h4 {
+        position: absolute;
+
+    }
+
+    .container-grid button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .breast,
+    .backstroke,
+    .butterfly,
+    .freestyle,
+    .kick,
+    .im,
+    .distance,
+    .quick-swim {
+        position: relative;
+    }
+
+    .text-block {
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 250px;
+        height: 250px;
+        background-color: rgba(79, 96, 101, 0.521);
+        border-radius: 5px;
+    }
+
+    .text-block h4 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 36px;
+        font-weight: bolder;
+        color: white;
+    }
+    
+    .text-block h6 {
+        position: absolute;
+        top: 40px;
+        font-size: 30px;
+        font-weight: bolder;
+        left: 10px;
+        color: #00e1ff;
+    }
+
+    .text-block p {
+        position: absolute;
+        top: 165px;
+        left: 10px;
+        text-align: left;
+        font-size: 30px;
+        line-height: 23px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .challengesHeader {
+        display: none;
+    }
+
+    .challengesHeader button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .challengesHeader i {
+        font-size: 27px;
+        margin-left: 120px;
+        color: white;
+    }
+
+    .challengesHeader h1 {
+        margin-left: 170px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .searchChallenges {
+        margin-top: 80px;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .searchChallenges i {
+        position: absolute;
+    }
+
+    #searchbar {
+        position: absolute;
+        border: none;
+        background-color: rgba(223, 222, 222, 0.413);
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    #searchbar input[type=text] {
+        width: 30%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+    }
+
+    #searchbar input[type=text]:focus {
+        width: 70%;
+    }
+    .suggestions{
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-items: center;
+    }
+
+    .suggestions h4 {
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 5px;
+        padding-left: 10px;
+        height: 50px;
+        font-weight: bolder;
+        color: rgb(2, 118, 185);
+    }
+
+    .challanges {
+        height: 290px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .challangeImg {
+        width: 100%;
+        height: 120px;
+        background: url(../images/96233073_865496890613372_8681221068154732544_n.jpg) no-repeat;
+        background-size: cover;
+        background-position: right;
+        border-radius: 5px;
+    }
+
+    .challangeDetails {
+        display: flex;
+        font-size: 13px;
+    }
+
+    .challangeDate {
+        margin-left: 20px;
+        margin-top: 10px;
+        color: #5f5e5e;
+        font-weight: bolder;
+    }
+
+    .challaneTime h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #19196f;
+    }
+
+    .challaneTime h5 {
+        font-size: 16px;
+        margin-top: 3px;
+        margin-left: 20px;
+        color: #19196f;
+        line-height: 10px;
+    }
+
+    .challanges p {
+        margin-top: 15px;
+        margin-left: 20px;
+        color: #197eac;
+        font-size: 16px;
+    }
+
+    .challanges button {
+        width: 200px;
+        height: 40px;
+        background-color: #00acc1;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------- index.html(mobile)----------------*/
+
+@media only screen and (max-width: 458px) {
+
+    .loginContainer {
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+        position: absolute;
+        text-align: center;
+        padding-top: 30px;
+        top: 40px;
+        left: 20px;
+        width: 90%;
+        height: 800px;
+
+    }
+
+    .loginIconImage>img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .loginTitle h1,
+    .registerSection h1 {
+        font-size: 38px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .loginSection label,
+    .registerSection label {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: rgba(0, 0, 0, 0.529);
+        font-weight: bold;
+    }
+
+    .registerSection {
+        display: none;
+    }
+
+
+    .loginSection span,
+    .registerSection span {
+        position: absolute;
+        margin-left: 30px;
+        transition: 0.3s;
+        transform: translateY(0px) translateY(-7px);
+        background: white;
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid rgba(0, 0, 0, 0.529);
+        letter-spacing: 0.2rem;
+        border-right: 1px solid rgba(0, 0, 0, 0.529);
+        background: white;
+        font-size: 14px;
+    }
+
+    .loginSection input{
+        width: 300px;
+        height: 50px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        padding-top: 10px;
+        border: none;
+        background: rgba(0, 102, 133, 0.718);
+    }
+    .registerSection input {
+        width: 300px;
+        height: 50px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+        padding-left: 30px;
+        border: none;
+        background: rgba(0, 102, 133, 0.718);
+    }
+
+    .loginSection input::placeholder,
+    .registerSection input::placeholder {
+        color: white;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .forgot {
+        position: absolute;
+        bottom: 200px;
+        right: 34px;
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+        color: white;
+        opacity: 0.7;
+    }
+
+    .loginSection input[type="submit"],
+    .registerSection input[type="submit"] {
+        font-size: 18px;
+        margin-left: 0px;
+        height: 70px;
+        padding-bottom: 7px;
+    }
+
+    .loginSection h5,
+    .registerSection h5 {
+        color: white;
+        font-size: 16px;
+        width: 90%;
+        margin-left: 18px;
+        padding-top: 10px;
+    }
+
+    .loginBySocial {
+        color: white;
+    }
+
+    .loginBySocial i {
+        margin-right: 15px;
+        font-size: 20px;
+    }
+
+    .notAccount {
+        margin-top: 30px;
+        color: white;
+        opacity: 0.6;
+    }
+
+    .notAccount button {
+        border: none;
+        background-color: transparent;
+        color: rgb(0, 9, 11);
+    }
+
+    .BackToLogin {
+        margin-top: 5px;
+        border: none;
+        background-color: transparent;
+        color: rgb(1, 74, 91);
+    }
+
+    .topHeader {
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        padding-top: 25px;
+        height: 80px;
+        width: 100%;
+        z-index: 998;
+        position: fixed;
+        align-items: center;
+        justify-content: space-evenly;
+        background: rgb(0, 101, 133);
+        background: linear-gradient(153deg, rgba(0, 101, 133, 0.97) 0%, rgba(0, 172, 226, 1) 100%);
+    }
+
+    .topHeader button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .topHeader i {
+        font-size: 30px;
+        margin: 8px 10px;
+        font-size: 27px;
+        color: white;
+    }
+
+    .topHeader h1 {
+        margin-top: 20px;
+        margin-left: 45px;
+        margin-right: 45px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .subHeader {
+        display: flex;
+        text-decoration: none;
+        margin-top: 80px;
+        padding-top: 10px;
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        justify-content: left;
+    }
+
+    .subHeader .subTitle {
+        text-decoration: none;
+        color: #5f5e5e;
+        font-size: 20px;
+        margin-left: 7px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    #club {
+        margin-right: 120px;
+    }
+
+    .subHeader .active {
+        font-weight: bold;
+        color: rgb(0, 123, 255);
+    }
+
+    .subHeader a i {
+        margin-left: 3px;
+    }
+
+    #dropFilter {
+        float: right;
+    }
+
+    .settings {
+        background-color: white;
+        border-radius: 30px;
+        position: fixed;
+        display: none;
+        width: 100%;
+        top: 4%;
+        padding-top: 10px;
+        height: 100%;
+        z-index: 999;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .profileUser {
+        display: none;
+    }
+
+    .settings i {
+        padding-left: 25px;
+    }
+
+    .settings li {
+        list-style-type: none;
+        margin-bottom: 30px;
+        width: 360px;
+        padding-left: 20px;
+    }
+
+    .settings li h3 {
+        display: inline;
+        margin-right: 140px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        border-radius: 50%;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: #1BDFDF;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px #1BDFDF;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    .setting_Logo img {
+        width: 170px;
+        height: 170px;
+        margin-top: 50px;
+        margin-left: 130px;
+        opacity: .5;
+    }
+
+    .settings button {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .notification {
+        background-color: white;
+        border-radius: 30px;
+        position: fixed;
+        display: none;
+        width: 100%;
+        top: 4%;
+        padding-top: 10px;
+        height: 100%;
+        z-index: 999;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    .notification button {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        margin-left: 20px;
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .notification h4 {
+        text-align: center;
+        opacity: 50%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .container {
+        background-image: url(../images/women-swimmer.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: 125px;
+        width: 97%;
+        height: 156px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container img {
+        float: right;
+        margin-top: 68px;
+        margin-right: 8px;
+    }
+
+    .container h1 {
+        position: relative;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        padding-top: 20px;
+        top: 0px;
+        font-weight: bold;
+    }
+
+    .welcome {
+        background-color: white;
+        width: 97%;
+        margin-left: 6px;
+        height: 80px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .welcome p {
+        display: inline;
+    }
+
+
+    .swimmers {
+        background-color: white;
+        margin-top: 10px;
+        padding-top: 10px;
+        height: 200px;
+        border-radius: 10px;
+        width: 97%;
+        margin-left: 6px;
+    }
+
+    .swimerDetails h3 {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        border-radius: 50%;
+        margin-left: 10px;
+        padding-left: 17px;
+        padding-top: 18px;
+        color: white;
+        background-color: #1BDFDF;
+    }
+
+    .swimerDetails h1 {
+        position: absolute;
+        margin-left: 80px;
+        color: #1b59df;
+        font-size: 20px;
+    }
+
+    .swimerDetails h6 {
+        margin-left: 81px;
+        padding-top: 23px;
+        font-size: 10px;
+    }
+
+    #swimerType {
+        float: right;
+        font-size: 30px;
+        margin-right: 10px;
+        top: 0;
+        color: rgba(0, 0, 0, 0.435);
+    }
+
+    .timeAndDistance {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .timeAndDistance h5 {
+        font-size: 14px;
+    }
+
+    .vertical {
+        display: inline;
+        border-left: 2px solid black;
+        margin: 8px;
+    }
+
+    .partName {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .timeAndDistance h4 {
+        font-size: small;
+        left: 0;
+        margin-right: 41px;
+        opacity: 0.3;
+    }
+
+    .horizontal {
+        width: 97%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+    }
+
+    .commentBtn button {
+        display: flex;
+        flex-direction: row;
+        margin-left: 34%;
+        margin-top: 6px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .commentBtn button i {
+        margin-right: 10px;
+        opacity: 0.5;
+    }
+
+    .commentBtn button h5 {
+        margin-top: 3px;
+        opacity: 0.5;
+    }
+
+    .swimmersPage {
+        width: 97%;
+        margin-left: 6px;
+        height: 600px;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 150px;
+        padding-top: 30px;
+    }
+
+    .swimmersPage h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 102, 133, 0.718);
+    }
+
+    .swimmersPage input[type='text'] {
+        width: 350px;
+        margin-top: 5px;
+        margin-left: 35px;
+        padding-left: 20px;
+        border-radius: 10px;
+        border: 0.5px solid gray;
+    }
+
+    .swimmersPage .swimmerPageUl {
+        width: 95%;
+        height: 370px;
+        border-radius: 10px;
+        background-color: rgba(128, 128, 128, 0.108);
+        margin-top: 20px;
+        margin-left: 10px;
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+
+    .swimmersPage .swimmerPageUl li {
+        list-style: none;
+        padding-left: 0;
+    }
+    .personalUlLi{
+        background-color: rgba(128, 128, 128, 0.108);
+        width: 95%;
+        height: 155px;
+        margin-left: 15px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .ulLeftUserInfo{
+        position: absolute;
+        left: 3px;
+        list-style: none;
+        font-size: 16px;
+        background:none;
+    }
+    .ulRightUserInfo{
+        position: absolute;
+        right: 40px;
+        font-size: 16px;
+        list-style: none;
+        background: none;
+    }
+
+    .swimmersPage .swimmerDetails h5 {
+        display: inline-block;
+        color: #698184;
+        width: 140px;
+    }
+    .swimmerDetails h6{
+        font-size: 12px;
+        margin-right: 15px;
+    }
+
+    .swimmersPage h6 {
+        display: inline;
+        color: #5b5e65;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 45px;
+    }
+
+    .buttons #edit {
+        border: 1px solid rgb(231, 157, 19);
+        background-color: rgb(255, 204, 0);
+        width: 80px;
+        border-radius: 20px;
+    }
+
+    .buttons #addPerson {
+        border: 1px solid rgb(44, 183, 234);
+        background-color: #006685b7;
+        width: 160px;
+        height: 40px;
+        color: white;
+        border-radius: 20px;
+    }
+    .editSwimmer{
+        display: none;
+        background-color: rgb(255, 200, 0);
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+        margin-right: 3px;
+    }
+    .deleteSwimmer{
+        display: none;
+        background-color: rgb(255, 0, 0);
+        border: none;
+        border-radius: 5px;
+        padding: 2px;
+        margin-right: 3px;
+        margin-right: 10px;
+    }
+
+    .weekTraining {
+        width: 97%;
+        margin-left: 6px;
+        height: 420px;
+        background-color: white;
+        border-radius: 10px;
+        margin-top: 50px;
+        padding-top: 30px;
+    }
+
+    .weekTraining h1 {
+        margin-bottom: 25px;
+    }
+
+    .allDeatails {
+        background-color: rgba(128, 128, 128, 0.108);
+        width: 95%;
+        margin-left: 10px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .weekTraining .swimerDetails h1 {
+        background-color: transparent;
+        color: black;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .weekTraining .swimerDetails h6 {
+        display: block;
+        padding-top: 35px;
+    }
+
+    .updateSwimmer{
+        position: fixed;
+        width: 100%;
+        top: 4%;
+        height: 100%;
+    }
+    .sign-container{
+        display: none;
+    }
+    .dropdown-content {
+        position: fixed;
+        display: block;
+        width: 100%;
+        top: 4%;
+        height: 100%;
+        z-index: 2000;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        z-index: 2000;
+    }
+
+    .addSwimmer {
+        position: fixed;
+        display: none;
+        width: 100%;
+        top: 4%;
+        height: 100%;
+        z-index: 999;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+        form {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .addSwimmer form , .updateSwimmer form{
+        background-color: white;
+        position: fixed;
+        /* margin: auto; */
+        padding: 20px;
+        border-radius: 30px;
+        top: 0;
+        width: 100%;
+        height: 95%;
+    }
+
+    .addSwimmer input, .updateSwimmer input {
+        width: 380px;
+        padding: 15px;
+        border-radius: 3px;
+        outline: none;
+        /* background-color: #1BDFDF; */
+        border: 1px solid rgba(134, 220, 246, 0.651);
+        font-size: 14px;
+        transition: 0.3s;
+        margin-bottom: 15px;
+    }
+
+    .addSwimmer span , .updateSwimmer span{
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.681);
+        pointer-events: none;
+        text-transform: uppercase;
+        margin-left: 30px;
+        transition: 0.3s;
+    }
+
+    .addSwimmer input:valid~span,
+    .addSwimmer input:focus~span,
+    .updateSwimmer input:valid~span,
+    .updateSwimmer input:focus~span{
+        color: #1BDFDF;
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid #1BDFDF;
+        letter-spacing: 0.2rem;
+        border-right: 1px solid #1BDFDF;
+        background: white;
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        background-color: white;
+        color: white;
+    }
+
+    input[type="file"]::file-selector-button {
+        background-color: white;
+        color: white;
+        border: none;
+    }
+
+    input[type="submit"] {
+        font-size: 40px;
+        text-align: center;
+        padding-right: 35px;
+        color: white;
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+        border-radius: 20px;
+        height: 90px;
+    }
+
+    .addSwimmer #closeFormBtn, .updateSwimmer #closeFormBtn {
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .addSwimmer strong,
+    .addSwimmer h1,
+    .updateSwimmer strong,
+    .updateSwimmer h1 {
+        color: black;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: #ECECEC;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 62px;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        float: left;
+        display: flex;
+        flex-direction: column;
+        color: rgba(0, 0, 0, 0.555);
+        text-align: center;
+        padding: 6px 16px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: bolder;
+    }
+
+    .navbar img {
+        display: none;
+    }
+
+    .navbar a:hover {
+        background: #f1f1f1;
+        color: black;
+    }
+
+    .navbar a.active {
+        color: rgb(18, 165, 228);
+    }
+    .logASwim{
+        display: none;
+    }
+    .userProgBtn{
+        border: none;
+        background-color: transparent;
+        margin-left: 175px;
+        height: 200px;
+        
+    }
+    .userProgBtn .userProgA{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        background: rgba(0, 102, 133, 0.718);
+        border: 5px solid rgba(0, 102, 133, 0.718);
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: -110px;
+        
+    }
+
+    /*---------------------- workout.html(mobile)----------------*/
+    .combineIBtn {
+        letter-spacing: -1.4rem;
+    }
+
+    .fa-plus#swimPlusBtn {
+        font-size: 12px;
+        display: inline-flex;
+    }
+
+    .fa-person-swimming#perSwim {
+        font-size: 28px;
+        transform: rotateY(180deg);
+    }
+
+    .addSwim {
+        position: fixed;
+        width: 100%;
+        display: none;
+        top: 4%;
+        height: 100%;
+        z-index: 999;
+        transform: translateY(100%);
+        animation: slide-in .5s ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes slide-in {
+        form {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .addSwim form {
+        background-color: white;
+        position: fixed;
+        margin: auto;
+        padding: 20px;
+        border-radius: 30px;
+        top: 0;
+        width: 100%;
+        height: 95%;
+    }
+
+    .addSwim input {
+        width: 380px;
+        padding: 15px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid rgba(134, 220, 246, 0.651);
+        font-size: 14px;
+        transition: 0.3s;
+        margin-bottom: 15px;
+    }
+
+    .addSwim span {
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        color: rgba(0, 0, 0, 0.681);
+        pointer-events: none;
+        text-transform: uppercase;
+        margin-left: 30px;
+        transition: 0.3s;
+    }
+
+    .addSwim input:valid~span,
+    .addSwim input:focus~span {
+        color: #1BDFDF;
+        transform: translateY(0px) translateY(-7px);
+        padding: 0 15px;
+        border-left: 1px solid #1BDFDF;
+        letter-spacing: 0.2rem;
+        border-right: 1px solid #1BDFDF;
+        background: white;
+        font-size: 14px;
+    }
+
+     .addSwim #saveBtn {
+        width: 380px;
+        height: 100px;
+        margin-top: 50px;
+        font-size: 40px;
+        background-color: #1BDFDF;
+        border: none;
+        color: white;
+    }
+
+
+    .addSwim #closeAddSwim {
+        background-color: transparent;
+        border: none;
+        color: rgb(0, 145, 255);
+        font-size: 35px;
+        width: 40px;
+        cursor: pointer;
+    }
+        
+
+    .addSwim h1 {
+        color: black;
+        background-color: #00acc1;
+        color: white;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    #Distance,
+    #Course {
+        position: relative;
+        display: inline;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        width: 172px;
+        height: 50px;
+        background: none;
+        border: 0.9px solid #00acc1;
+        color: #1BDFDF;
+        text-align: center;
+    }
+
+    #swimType {
+        position: relative;
+        display: inline;
+        margin-bottom: 18px;
+        width: 380px;
+        height: 50px;
+        font-size: 22px;
+        background: none;
+        border: 0.9px solid #00acc1;
+        color: #00acc1;
+        text-align: center;
+    }
+
+    #Distance:focus,
+    #Course:focus {
+        background: none;
+        background-color: white;
+        color: #00acc1;
+    }
+
+    #swimType:focus {
+        background: none;
+        background-color: white;
+        color: #00acc1;
+    }
+
+    input[type="time"],
+    input[type="date"] {
+        color: #00acc1;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #course {
+        color: #00acc1;
+        width: 85px;
+        padding-left: 10px;
+        border-left: 1px solid #00acc1;
+        border-right: 1px solid #00acc1;
+        font-weight: 100;
+    }
+
+    .workoutOfTheWeek h2 {
+        color: #5b5e65;
+        margin-top: 100px;
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .workoutAdvertising {
+        background-color: white;
+        border-radius: 5px;
+        width: 96%;
+        margin-left: 8px;
+        height: 235px;
+    }
+    .workoutOfTheWeek h3{
+        font-size: 18px;
+    }
+
+    .workoutAdvertising h4 {
+        padding-top: 20px;
+        padding-left: 15px;
+        color: #061538b7;
+        font-weight: bolder;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising h5 {
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 18px;
+        color: #666668;
+        font-weight: bold;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising h6 {
+        padding-left: 16px;
+        color: #5b5e65ba;
+        font-weight: bold;
+        line-height: 80%;
+    }
+
+    .workoutAdvertising p {
+        line-height: 19px;
+        margin-left: 10px;
+        font-weight: bold;
+        color: #061538b7;
+    }
+
+    .workoutAdvertising img {
+        width: 50px;
+        position: absolute;
+        margin-left: 340px;
+        margin-top: 15px;
+    }
+
+
+    #swimAd {
+        margin-left: 13px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        font-size: 24px;
+        color: #66666866;
+    }
+
+    .workoutAdvertising h3 {
+        color: #66666866;
+        padding-bottom: 100px;
+        display: inline;
+    }
+
+    .dotAd,
+    .dotAd1,
+    .dotAd2 {
+        height: 12px;
+        width: 12px;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: #666668;
+    }
+
+    .dotAd {
+        margin-left: 50px;
+    }
+
+    .dotAd1 {
+        background-color: #51c7eb;
+    }
+
+    .dotAd2 {
+        background-color: #19aca0;
+    }
+
+    .adLine {
+        border-top: 3px solid #aeaeae6e;
+        margin-bottom: 4px;
+    }
+
+    .adLove {
+        color: rgba(128, 128, 128, 0.293);
+        font-weight: bold;
+    }
+
+    .adLove i {
+        font-size: 18px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .browseByCategory {
+        padding-bottom: 25px;
+    }
+
+    .browseByCategory h2 {
+        color: #5b5e65;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        margin-left: 15px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .swimType {
+        background-color: white;
+        border-radius: 5px;
+        height: 900px;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 16px;
+        padding-top: 20px;
+    }
+
+    .container-grid img {
+        border-radius: 5px;
+        position: relative;
+        margin-bottom: 20px;
+        width: 190px;
+        height: 190px;
+    }
+
+    .container-grid h4 {
+        position: absolute;
+
+    }
+
+    .container-grid button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .breast,
+    .backstroke,
+    .butterfly,
+    .freestyle,
+    .kick,
+    .im,
+    .distance,
+    .quick-swim {
+        position: relative;
+    }
+
+    .text-block {
+        position: absolute;
+        left: 0px;
+        top: 0;
+        width: 190px;
+        height: 190px;
+        background-color: rgba(79, 96, 101, 0.521);
+        border-radius: 5px;
+    }
+
+    .text-block h4 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 26px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .text-block h6 {
+        position: absolute;
+        top: 40px;
+        font-weight: bolder;
+        left: 10px;
+        color: #00e1ff;
+    }
+
+    .text-block p {
+        position: absolute;
+        width: 140px;
+        top: 145px;
+        left: 10px;
+        text-align: left;
+        line-height: 12px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .commercial {
+        display: none;
+    }
+
+    /*--------------------Progress.html----------------------*/
+
+
+    .swimmerDetailsContainer h1{
+        position: relative;
+        top: 90px;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 102, 133, 0.718);
+        z-index: 1;
+
+    }
+    .swimmerInformation{
+        position: absolute;
+        top: 150px;
+        width: 96%;
+        border-radius: 10px;
+        height: 185px;
+        margin-left: 6px;
+        background-color: white;
+
+    }
+    .swimmerInformation h3{
+        padding-top: 10px;
+        text-align: center;
+        opacity: 0.8;
+    }
+    .leftInfo{
+        position: absolute;
+        top: 50px;
+        left: 16px;
+        float: left;
+        list-style: none;
+    }
+    .rightInfo{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        float: right;
+        list-style: none;
+    }
+    .idIsBad{
+        display: block;
+    }
+    .idIsBad h1{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        top: 30%;
+        left: 12%;
+        width: 300px;
+        height: 300px;
+        font-weight: bolder;
+        color: white;
+        background: rgba(0, 102, 133, 0.718);
+        border: 10px solid rgba(0, 102, 133, 0.718);
+    }
+    .idIsGood{
+        display: none;
+    }
+
+
+    .swimInfoContainer{
+        position: absolute;
+        top: 887px;
+        width: 97%;
+        border-radius: 10px;
+        padding: 10px;
+        height: 155px;
+        margin-left: 6px;
+        background-color: white;
+
+    }
+    .swimInformation{
+        padding-bottom: 70px;
+    }
+    .swimInformation h2{
+        text-align: center;
+    }
+    .swimInformation ul{
+        list-style: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .circle-chart {
+        position: absolute;
+        top: 625px;
+        padding-top: 10px;
+        width: 97%;
+        margin-left: 6px;
+        height: 250px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .circleAllContainer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .circleContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .circle-chart h2 {
+        text-align: left;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #061941;
+    }
+
+    .circle-chart h5 {
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .circle-chart h6 {
+        line-height: 10px;
+        margin-left: 10px;
+    }
+
+    .circle-chart__circle {
+        animation: circle-chart-fill 1s reverse;
+        transform-origin: center;
+    }
+
+    .circle-chart__info {
+        animation: circle-chart-appear 1s forwards;
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    @keyframes circle-chart-fill {
+        to {
+            stroke-dasharray: 0 100;
+        }
+    }
+
+    @keyframes circle-chart-appear {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .bar-chart {
+        text-align: left;
+        position: absolute;
+        top: 345px;
+        left: 6px;
+        padding-top: 10px;
+        width: 97%;
+        height: 270px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .bar-chart h2 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    /*-------------------------challenges.html--------------------------------*/
+    .challengesHeader {
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        padding-top: 25px;
+        height: 80px;
+        width: 100%;
+        z-index: 998;
+        position: fixed;
+        align-items: center;
+        background: rgb(0, 101, 133);
+        background: linear-gradient(153deg, rgba(0, 101, 133, 0.97) 0%, rgba(0, 172, 226, 1) 100%);
+    }
+
+    .challengesHeader button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .challengesHeader i {
+        font-size: 27px;
+        margin-left: 120px;
+        color: white;
+    }
+
+    .challengesHeader h1 {
+        margin-left: 150px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .searchChallenges {
+        margin-top: 80px;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .searchChallenges i {
+        position: absolute;
+    }
+
+    #searchbar {
+        position: absolute;
+        border: none;
+        background-color: rgba(223, 222, 222, 0.413);
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    #searchbar input[type=text] {
+        width: 30%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+    }
+
+    #searchbar input[type=text]:focus {
+        width: 70%;
+    }
+    .suggestions .container-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 20px;
+        margin-bottom: 50px;
+    }
+    .suggestions h4 {
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 0;
+        padding-top: 5px;
+        padding-left: 10px;
+        text-align: center;
+        height: 30px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: rgb(0, 101, 133);
+        
+    }
+
+    .challanges {
+        width: 100%;
+        height: 290px;
+        background-color: white;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .challangeImg {
+        width: 97%;
+        height: 120px;
+        margin-left: 7px;
+        background: url(../images/96233073_865496890613372_8681221068154732544_n.jpg) no-repeat;
+        background-size: cover;
+        background-position: right;
+        border-radius: 5px;
+    }
+
+    .challangeDetails {
+        display: flex;
+        font-size: 13px;
+    }
+
+    .challangeDate {
+        margin-left: 20px;
+        margin-top: 10px;
+        color: #5f5e5e;
+        font-weight: bolder;
+    }
+
+    .challaneTime h3 {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #19196f;
+    }
+
+    .challaneTime h5 {
+        font-size: 16px;
+        margin-top: 3px;
+        margin-left: 20px;
+        color: #19196f;
+        line-height: 10px;
+    }
+
+    .challanges p {
+        margin-top: 15px;
+        margin-left: 20px;
+        color: #197eac;
+        font-size: 16px;
+    }
+
+    .challanges button {
+        width: 200px;
+        height: 40px;
+        background-color: #00acc1;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*-----------------End-Mobile----------------*/

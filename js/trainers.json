@@ -1,0 +1,59 @@
+{"trainers": {
+        "swimmer1":{
+            "shortName": "YH",
+            "name":"yaniv haim",
+            "date":"may 14,2022 @ 02:52pm",
+            "swimType": "Breaststroke",
+            "dustance": "25y",
+            "duration":"16:14:00",
+            "pace":"64:55:59/100y"
+            
+        },
+        "swimmer2":{
+            "shortName": "KL",
+            "name":"Katie Ledecky",
+            "date":"may 15,2022 @ 05:12pm",
+            "swimType": "Freestyle",
+            "dustance": "50y",
+            "duration":"32:20:10",
+            "pace":"12:15:59/100y"
+    },
+        "swimmer3":{
+            "shortName": "CD",
+            "name":"Caeleb Dressel",
+            "date":"may 15,2022 @ 05:12pm",
+            "swimType": "Freestyle",
+            "dustance": "50y",
+            "duration":"32:20:10",
+            "pace":"12:15:59/100y"
+    },
+        "swimmer4":{
+            "shortName": "MS",
+            "name":"Mark Spitz",
+            "date":"may 15,2022 @ 05:12pm",
+            "swimType": "Freestyle",
+            "dustance": "50y",
+            "duration":"32:20:10",
+            "pace":"12:15:59/100y"
+    },
+        "swimmer5":{
+            "shortName": "SM",
+            "name":"Simone Manuel",
+            "date":"may 15,2022 @ 05:12pm",
+            "swimType": "Freestyle",
+            "dustance": "50y",
+            "duration":"32:20:10",
+            "pace":"12:15:59/100y"
+    },
+        "swimmer6":{
+            "shortName": "SM",
+            "name":"Simone Manuel",
+            "date":"may 15,2022 @ 05:12pm",
+            "swimType": "Freestyle",
+            "dustance": "50y",
+            "duration":"32:20:10",
+            "pace":"12:15:59/100y"
+    }
+}
+
+} 
